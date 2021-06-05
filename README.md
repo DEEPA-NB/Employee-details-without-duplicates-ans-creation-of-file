@@ -66,3 +66,27 @@ Here I am creating the file object and storing the data in the file permanently 
 		PrintWriter writer = new PrintWriter(new FileOutputStream(file,true));
     
  And used switch case to choose the optionns according to the user need.   
+ 
+     case 1: emp = new Clerk();
+     break;
+     case 2: emp = new Manager();
+     break;
+     case 3: emp = new Programmer();
+     break;
+     case 4: break;
+     default: System.out.print("\n\ninvalid entry...!");
+     break;	
+     
+This for loop is used to check if the employee details are already exist or not. If present then it will print record already exist as output.    
+     
+     for( Employee k : employee) 
+     {
+	if(k.name.equals(emp.name) && k.age == emp.age) 
+	  {
+	    System.out.print("\nRecord already exists...");
+	    existing = true;
+	    break;
+	  }
+      }
+      
+I have used try catch block to handle the exceptions.      
